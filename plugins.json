@@ -1,0 +1,295 @@
+{
+  "desc": "由 MyGo Music 插件转换的 MusicFree 插件集（58 个站点）",
+  "plugins": [
+    {
+      "name": "世纪音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/4c44-music.js",
+      "version": "1.1.0"
+    },
+    {
+      "name": "5nd音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/5nd-music.js",
+      "version": "1.6.2"
+    },
+    {
+      "name": "凤梨音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/flmp3-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "优折美音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/uzz-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "汽车音乐网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/carsmp3-music.js",
+      "version": "1.0.2"
+    },
+    {
+      "name": "闪闪音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/33ve.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "5sing",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/5sing.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "动感酷音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/dgcol.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "GD音乐台",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/gdstudio.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "好听轻音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/htqyy.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "米乐迪音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/imelody.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "米粒音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/milimusic.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "无名音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/mvmp3.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "小蜜蜂音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/xmfwav.js",
+      "version": "1.0.1"
+    },
+    {
+      "name": "VY音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/yyvy.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "听听网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/tingting.js",
+      "version": "1.0.1"
+    },
+    {
+      "name": "九天音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/nine-sky.js",
+      "version": "1.0.1"
+    },
+    {
+      "name": "布谷音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/buguyy-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "一起听歌吧",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/jusic-room.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "糖豆音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/tangdou.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "广场舞地盘",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/gcwdp.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "IN音乐网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/inmp3.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "放屁网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/fangpiw.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "7082音乐网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/music7082.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "无忧音乐网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/ting05.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "番茄音乐",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/fanqie-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "DJ024电音",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/dj024-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "36DJ舞曲",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/36dj-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "猫耳FM",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/missevan-music.js",
+      "version": "1.1.1"
+    },
+    {
+      "name": "听书网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/tingshuwang-music.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "恋听网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/ting55.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "飞卢听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/faloo.js",
+      "version": "0.1.1"
+    },
+    {
+      "name": "275听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/i275.js",
+      "version": "0.1.1"
+    },
+    {
+      "name": "听FM电台",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/tingfm.js",
+      "version": "0.2.0"
+    },
+    {
+      "name": "悦听吧",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/yuetingba.js",
+      "version": "0.1.4"
+    },
+    {
+      "name": "85听书网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/85ting.js",
+      "version": "0.2.2"
+    },
+    {
+      "name": "环球听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/hqkomics.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "更快听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/gkbasic.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "爱上听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/kmbas.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "59听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/ting59.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "三九听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/sanjiuwang.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "瓜播听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/guabo.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "伊薇听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/eweizhi.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "一一听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/eyihu.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "我爱听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/ipangxie.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "幻听听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/q062.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "听友听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/tingyou.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "石头听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/shitou.js",
+      "version": "0.2.0"
+    },
+    {
+      "name": "易听书网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/yitingshu.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "99听书网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/ting99.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "单田芳评书网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/pingshu5.js",
+      "version": "0.1.1"
+    },
+    {
+      "name": "我听评书网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/qmtsw.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "娓雅评书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/wpingshu.js",
+      "version": "0.1.0"
+    },
+    {
+      "name": "嗨瑶DJ",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/haiyaodj.js",
+      "version": "1.1.0"
+    },
+    {
+      "name": "囧贼听书",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/jiongzei.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "评书吧",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/pingshu8.js",
+      "version": "1.0.1"
+    },
+    {
+      "name": "幻听网",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/piomotto.js",
+      "version": "1.0.0"
+    },
+    {
+      "name": "听澜书阁",
+      "url": "https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins/ysxs1.js",
+      "version": "1.0.0"
+    }
+  ]
+}

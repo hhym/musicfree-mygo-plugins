@@ -1,2 +1,113 @@
-# musicfree-mygo-plugins
-MusicFree plugins converted from MyGo Music plugin sites (58 platforms)
+# MusicFree 版 MyGo 插件集（58 个站点）
+
+把 MyGo Music 插件总表中的 58 个站点，按 `maotoumao/MusicFreePlugins` 的单文件 CommonJS 规范转换成了 MusicFree 插件。每个 `.js` 都是独立文件，直接 `require` 或导入 MusicFree 插件管理器即可。
+
+## 数量
+
+共 **58** 个插件：音乐 26 个、DJ音乐 3 个、听书 25 个、评书 4 个。
+
+## 安装
+
+1. 打开 MusicFree → 插件管理 → 本地插件 → 从文件导入，选择 `plugins/` 下对应的 `.js`。
+2. 批量安装：在 MusicFree 插件管理里添加订阅链接 `https://raw.githubusercontent.com/hhym/musicfree-mygo-plugins/main/plugins.json`，或直接导入仓库根目录的 `plugins.json`。
+3. 插件不依赖 npm 包、不需要构建，单文件即可运行。
+
+## 目录结构
+
+```
+musicfree-mygo-plugins/
+├── plugins/            # 58 个 MusicFree 单文件插件
+├── plugins.json        # MusicFree 插件订阅清单
+└── README.md
+```
+
+## 实现方式
+
+每个插件由三部分组成：内置的通用 MusicFree 运行时 + 原 MyGo 插件的业务代码（去掉 `export` 后包进参数化 IIFE）+ 末尾 `module.exports = makePlugin(...)`。站点抓取、解析、搜索和取流仍走已经实测过的 MyGo 实现，只把返回结构映射成 MusicFree 的 `title/artist/album/artwork/duration`、`isEnd/data`、`musicList`、`rawLrc` 等字段。
+
+- `search`：`music / album / artist / sheet` 映射到 MyGo 的 `tracks / albums / artists / playlists`。
+- `getMediaSource`：调用原插件 `stream`，透传 `url` 和 `headers`。
+- `getLyric`：调用 `lyrics` 或 `lyric`，返回 `rawLrc`。
+- `getAlbumInfo / getArtistWorks / getMusicSheetInfo`：映射专辑、歌手、歌单详情。
+- `getTopLists / getTopListDetail`：把 MyGo 首页分区转成 MusicFree 榜单。
+
+## 插件清单
+
+| # | 分类 | 插件 | ID | 版本 | 搜索冒烟 |
+|---:|---|---|---|---|---|
+| 1 | 音乐 | 世纪音乐 | `4c44-music` | 1.1.0 | 搜索通过（66 条） |
+| 2 | 音乐 | 5nd音乐 | `5nd-music` | 1.6.2 | 搜索通过（20 条） |
+| 3 | 音乐 | 凤梨音乐 | `flmp3-music` | 1.0.0 | 搜索通过（12 条） |
+| 4 | 音乐 | 优折美音乐 | `uzz-music` | 1.0.0 | 搜索通过（10 条） |
+| 5 | 音乐 | 汽车音乐网 | `carsmp3-music` | 1.0.2 | 搜索通过（30 条） |
+| 6 | 音乐 | 闪闪音乐 | `33ve` | 1.0.0 | 20 秒内未返回 |
+| 7 | 音乐 | 5sing | `5sing` | 1.0.0 | 搜索通过（10 条） |
+| 8 | 音乐 | 动感酷音乐 | `dgcol` | 1.0.0 | 源站异常：动感酷音乐：搜索失败 — 动感酷音乐返回了 503，请稍后重试 |
+| 9 | 音乐 | GD音乐台 | `gdstudio` | 1.0.0 | 搜索通过（30 条） |
+| 10 | 音乐 | 好听轻音乐 | `htqyy` | 1.0.0 | 可加载，查询无结果 |
+| 11 | 音乐 | 米乐迪音乐 | `imelody` | 1.0.0 | 搜索通过（2 条） |
+| 12 | 音乐 | 米粒音乐 | `milimusic` | 1.0.0 | 20 秒内未返回 |
+| 13 | 音乐 | 无名音乐 | `mvmp3` | 1.0.0 | 搜索通过（30 条） |
+| 14 | 音乐 | 小蜜蜂音乐 | `xmfwav` | 1.0.1 | 源站异常：小蜜蜂音乐：搜索失败 — 小蜜蜂音乐返回了 503，请稍后重试 |
+| 15 | 音乐 | VY音乐 | `yyvy` | 1.0.0 | 可加载，查询无结果 |
+| 16 | 音乐 | 听听网 | `tingting` | 1.0.1 | 源站异常：听听网：搜索失败 — 听听网返回 503，稍后再试 |
+| 17 | 音乐 | 九天音乐 | `nine-sky` | 1.0.1 | 搜索通过（3 条） |
+| 18 | 音乐 | 布谷音乐 | `buguyy-music` | 1.0.0 | 搜索通过（50 条） |
+| 19 | 音乐 | 一起听歌吧 | `jusic-room` | 1.0.0 | 搜索通过（30 条） |
+| 20 | 音乐 | 糖豆音乐 | `tangdou` | 0.1.0 | 可加载，查询无结果 |
+| 21 | 音乐 | 广场舞地盘 | `gcwdp` | 1.0.0 | 搜索通过（24 条） |
+| 22 | 音乐 | IN音乐网 | `inmp3` | 0.1.0 | 搜索通过（10 条） |
+| 23 | 音乐 | 放屁网 | `fangpiw` | 0.1.0 | 搜索通过（20 条） |
+| 24 | 音乐 | 7082音乐网 | `music7082` | 0.1.0 | 可加载，查询无结果 |
+| 25 | 音乐 | 无忧音乐网 | `ting05` | 0.1.0 | 搜索通过（30 条） |
+| 26 | 音乐 | 番茄音乐 | `fanqie-music` | 1.0.0 | 可加载，查询无结果 |
+| 27 | DJ音乐 | DJ024电音 | `dj024-music` | 1.0.0 | 搜索通过（28 条） |
+| 28 | DJ音乐 | 36DJ舞曲 | `36dj-music` | 1.0.0 | 可加载，查询无结果 |
+| 29 | 听书 | 猫耳FM | `missevan-music` | 1.1.1 | 搜索通过（28 条） |
+| 30 | 听书 | 听书网 | `tingshuwang-music` | 1.0.0 | 20 秒内未返回 |
+| 31 | 听书 | 恋听网 | `ting55` | 1.0.0 | 搜索通过（6 条） |
+| 32 | 听书 | 飞卢听书 | `faloo` | 0.1.1 | 搜索通过（20 条） |
+| 33 | 听书 | 275听书 | `i275` | 0.1.1 | 搜索通过（20 条） |
+| 34 | 听书 | 听FM电台 | `tingfm` | 0.2.0 | 搜索通过（20 条） |
+| 35 | 听书 | 悦听吧 | `yuetingba` | 0.1.4 | 搜索通过（3 条） |
+| 36 | 听书 | 85听书网 | `85ting` | 0.2.2 | 源站异常：85听书网：搜索失败 — 站点响应超时或连不上，过一会儿再试 |
+| 37 | 听书 | 环球听书 | `hqkomics` | 0.1.0 | 源站异常：环球听书：搜索失败 — https://hqkomics.com 返回了 |
+| 38 | 听书 | 更快听书 | `gkbasic` | 0.1.0 | 20 秒内未返回 |
+| 39 | 听书 | 爱上听书 | `kmbas` | 0.1.0 | 20 秒内未返回 |
+| 40 | 听书 | 59听书 | `ting59` | 0.1.0 | 源站异常：59听书：搜索失败 — https://59ting.com 返回了 5 |
+| 41 | 听书 | 三九听书 | `sanjiuwang` | 0.1.0 | 源站异常：三九听书：搜索失败 — https://sanjiuwang.com 返 |
+| 42 | 听书 | 瓜播听书 | `guabo` | 0.1.0 | 20 秒内未返回 |
+| 43 | 听书 | 伊薇听书 | `eweizhi` | 0.1.0 | 源站异常：伊薇听书：搜索失败 — https://www.eweizhi.com  |
+| 44 | 听书 | 一一听书 | `eyihu` | 0.1.0 | 源站异常：一一听书：搜索失败 — https://eyihu.com 返回了 50 |
+| 45 | 听书 | 我爱听书 | `ipangxie` | 0.1.0 | 源站异常：我爱听书：搜索失败 — https://ipangxie.com 返回了 |
+| 46 | 听书 | 幻听听书 | `q062` | 0.1.0 | 源站异常：幻听听书：搜索失败 — https://2q06.com 返回了 520 |
+| 47 | 听书 | 听友听书 | `tingyou` | 0.1.0 | 搜索通过（10 条） |
+| 48 | 听书 | 石头听书 | `shitou` | 0.2.0 | 搜索通过（40 条） |
+| 49 | 听书 | 易听书网 | `yitingshu` | 0.1.0 | 20 秒内未返回 |
+| 50 | 听书 | 99听书网 | `ting99` | 0.1.0 | 20 秒内未返回 |
+| 51 | 评书 | 单田芳评书网 | `pingshu5` | 0.1.1 | 搜索通过（20 条） |
+| 52 | 评书 | 我听评书网 | `qmtsw` | 0.1.0 | 20 秒内未返回 |
+| 53 | 评书 | 娓雅评书 | `wpingshu` | 0.1.0 | 20 秒内未返回 |
+| 54 | DJ音乐 | 嗨瑶DJ | `haiyaodj` | 1.1.0 | 20 秒内未返回 |
+| 55 | 听书 | 囧贼听书 | `jiongzei` | 1.0.0 | 20 秒内未返回 |
+| 56 | 评书 | 评书吧 | `pingshu8` | 1.0.1 | 搜索通过（60 条） |
+| 57 | 听书 | 幻听网 | `piomotto` | 1.0.0 | 20 秒内未返回 |
+| 58 | 听书 | 听澜书阁 | `ysxs1` | 1.0.0 | 仅目录（无音源） |
+
+## 冒烟测试
+
+测试方式：每个插件加载后执行一次 `search`（音乐/DJ 用「晴天」，听书/评书用「三国」），20 秒超时；`4c44-music` 和 `tingfm` 额外验证了 `getMediaSource` 返回的音频地址 HTTP 200、`getLyric`、`getTopLists` 和榜单详情。
+
+- 搜索返回结果：27 个
+- 可加载但查询无结果：7 个
+- 源站 503/520/连接失败：11 个
+- 20 秒内未返回：13 个
+
+## 已知限制
+
+- MusicFree 没有 MyGo 的本地 `spawn` / `ffmpeg` 能力。`85ting`、`shitou`、`yitingshu`、`ting05` 等依赖本地转码的插件，适配层已把 `transcode` 默认设为 `"0"`，优先取远端直链；遇到必须本地转码的源会失败。
+- 源站可用性不由插件决定。`jiongzei`、`dgcol` 等站点本次实测 503 或连接被拒；插件保留，站点恢复后可继续用。
+- `ysxs1`（听澜书阁）在原总表已标注“仅目录、无真实音源”，转换后同样只能浏览目录。
+- 音频直链多为签名地址，过期后需重新调用 `getMediaSource`；部分站点有 Referer / UA 防盗链，已在 `headers` 中透传。
+- 搜索接口按各站原实现，不保证支持所有关键词；搜索为空时可改用首页/分类浏览。
+
